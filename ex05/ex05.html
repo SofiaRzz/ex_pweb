@@ -10,7 +10,7 @@
     <h1>Escola Virtual</h1>
     <h2>Formulário de Pré-Matrícula</h2>
     <hr />
-    <form action="">
+    <form action="" id="form">
       <table>
         <thead>
           <tr>
@@ -42,17 +42,17 @@
             <td colspan="2"></td>
             <td>Telefone:</td>
             <td>
-              DDD(<input type="text" required />) Tel:<input
-                type="text"
+              DDD(<input type="text" required id="ddd" />) Tel:<input
+                type="number" id="telefone"
                 required
               />
-              Ramal:<input type="text" required />*
+              Ramal:<input type="number" required />*
             </td>
           </tr>
           <tr>
             <td colspan="2"></td>
             <td>Email:</td>
-            <td><input type="email" required />*</td>
+            <td><input type="email" id="email" required />*</td>
           </tr>
         </tbody>
       </table>
@@ -73,7 +73,7 @@
           <tr>
             <td></td>
             <td>
-              <select name="" id="" required>
+              <select required>
                 <option value=""></option>
                 <option value="">pré-escola</option>
                 <option value="">ensino fundamental I</option>
@@ -82,35 +82,35 @@
               </select>
             </td>
             <td><input type="radio" />Manhã</td>
-            <td><input type="checkbox" />Informática</td>
+            <td><input type="checkbox" name="checkExtras"/>Informática</td>
           </tr>
           <tr>
             <td colspan="2"></td>
             <td><input type="radio" />Tarde</td>
-            <td><input type="checkbox" />Música</td>
+            <td><input type="checkbox" name="checkExtras"/>Música</td>
           </tr>
           <tr>
             <td colspan="3"></td>
-            <td><input type="checkbox" />Ballet</td>
+            <td><input type="checkbox" name="checkExtras"/>Ballet</td>
           </tr>
           <tr>
             <td colspan="3"></td>
-            <td><input type="checkbox" />Pintura</td>
+            <td><input type="checkbox" name="checkExtras"/>Pintura</td>
           </tr>
           <tr>
             <td colspan="3"></td>
-            <td><input type="checkbox" />Judô</td>
+            <td><input type="checkbox" name="checkExtras"/>Judô</td>
           </tr>
           <tr>
             <td colspan="3"></td>
-            <td><input type="checkbox" />Futebol</td>
+            <td><input type="checkbox" name="checkExtras"/>Futebol</td>
           </tr>
         </tbody>
       </table>
       <p id="invalido" style="color: red; display: none"></p>
       <input
         type="submit"
-        onclick="enviaFormulario()"
+        onclick="enviaFormulario(event)"
         value="Envia Formulário"
       />
       <input type="reset" value="Limpa Campos" />
