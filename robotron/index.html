@@ -128,11 +128,11 @@
                     var controleAjusteMais = document.getElementsByClassName("controle-ajuste-mais")
                     var controleAjusteMenos = document.getElementsByClassName("controle-ajuste-menos")
                     var ajustes = [...controleAjusteMais, ...controleAjusteMenos]
-                    for (var i = 0; i < ajustes.length; i++){
-                        if (i < 5){
-                            ajustes[i].addEventListener("click", function(event){diminuir(event.target.id)})
-                        } else if (i >= 5){
-                            ajustes[i].addEventListener("click", function(event){adicionar(event.target.id)})
+                    for (var x = 0; x < ajustes.length; x++){
+                        if (x < 5){
+                            ajustes[x].addEventListener("click", function(event){diminuir(event.target.id)})
+                        } else if (x >= 5){
+                            ajustes[x].addEventListener("click", function(event){adicionar(event.target.id)})
                         }
                     }
 
