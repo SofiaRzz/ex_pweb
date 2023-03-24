@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num01 = parseFloat(prompt("Insira o primeiro número"))
+        var num02 = parseFloat(prompt("Insira o segundo número"))
+
+        function operacoes(num01, num02) {
+            return [num01 + num02, num01 - num02, num01 * num02, num01 / num02]
+        }
+
+        var [adicao, subtracao, multiplicacao, divisao] = operacoes(num01, num02)
+
+        alert(` ${num01} + ${num02} = ${adicao}\n ${num01} - ${num02} = ${subtracao}\n ${num01} * ${num02} = ${multiplicacao}\n ${num01} / ${num02} = ${divisao}`)
+
+        // alert(` ${num01} + ${num02} = ${num01 + num02}\n ${num01} - ${num02} = ${num01 - num02}\n ${num01} * ${num02} = ${num01 * num02}\n ${num01} / ${num02} = ${num01 / num02}`)
+    </script>
+</body>
+</html>

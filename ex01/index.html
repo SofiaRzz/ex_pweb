@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var anoAtual = new Date().getFullYear(); 
+        var minhaIdade = 17;
+        var idadePessoaEsquerda = 18; 
+        var idadePessoaDireita = 18;
+
+        document.write("Eu nasci em " + (anoAtual - minhaIdade));
+        pulaLinha();
+        document.write("A pessoa a minha esquerda nasceu em " + (anoAtual - idadePessoaEsquerda));
+        pulaLinha();
+        document.write("A pessoa a minha direita nasceu em " + (anoAtual - idadePessoaDireita));
+        pulaLinha();
+        document.write("A nossa média de idade é " + ((minhaIdade + idadePessoaDireita + idadePessoaEsquerda)/3));
+
+        // document.write(`<p>Eu nasci em ${anoAtual - minhaIdade}${pulaLinha()}A pessoa a minha esquerda nasceu em ${anoAtual - idadePessoaEsquerda}${pulaLinha()}A pessoa a minha direita nasceu em ${anoAtual - idadePessoaDireita}${pulaLinha()}A nossa média de idade é ${(minhaIdade + idadePessoaDireita + idadePessoaEsquerda)/3}</p>`)
+        
+        function pulaLinha() {
+            return "</br>"
+        }
+    </script>
+</body>
+</html>

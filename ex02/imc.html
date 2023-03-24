@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Atividade 2 </h1>
+    <label> Nome: </label>
+    <input type="text" id="nome">
+
+    <label> Peso: </label>
+    <input type="text" id="peso">
+
+    <label> Altura: </label>
+    <input type="text" id="altura">
+
+    <button onclick="calculo()">Calcula IMC</button>
+
+    <p id="resultado"></p>
+
+    <script>        
+        function calculo(){
+            var nome = document.getElementById("nome").value
+            var peso = parseFloat(document.getElementById("peso").value)
+            var altura = parseFloat(document.getElementById("altura").value)
+            var resultado = document.getElementById("resultado")
+            var imc = peso / (altura * altura)
+            resultado.innerHTML = "Olá " + nome + ". O seu IMC é de " + imc.toFixed(2)
+        }
+    </script>
+</body>
+</html>
